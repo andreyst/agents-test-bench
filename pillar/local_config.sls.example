@@ -1,0 +1,3 @@
+# Should be absolute path
+# Will contain all binaries, configs and runtime data of test bench
+test_bench_directory: /opt/agents-test-bench
