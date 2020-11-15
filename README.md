@@ -9,7 +9,7 @@ Load &amp; failure injection test bench of various logging/monitoring agents.
 1. Get [Salt](https://docs.saltstack.com/en/latest/topics/installation/index.html) on target system where you want to deploy agents test bench.
 2. Clone this repo.
 3. Configure test bench working directory by copying `pillar/local_config.sls.example` to `pillar/local_config.sls` and changing directory to desired. This directory will contain all configs, binaries and most importantly data, so ensure that directory is on partition which has enough disk space. Needed disk space depends on test duration, tens of GBs recommended.
-4. Apply salt state with `salt-call --local --file-root ./salt --pillar-root ./pillar state.highstate`. This should be executed from cloned repo root. This operation might take a while to install or build everything.
+4. Apply salt state with `salt-call --log-level debug --local --file-root ./salt --pillar-root ./pillar state.highstate`. This should be executed from cloned repo root. This operation might take a while to install or build everything.
 5. Applying salt state should finish without any errors. If there are any failed states, please report it via Github issues.
 
 # Troubleshooting
